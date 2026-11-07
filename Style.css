@@ -1,0 +1,447 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --vermelho: #e5222b;
+    --vermelho-escuro: #b8101b;
+    --preto: #171717;
+    --cinza: #666;
+    --branco: #fff;
+    --dourado: #ffc928;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: var(--preto);
+    background: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* MENU */
+
+.topo {
+    background: var(--preto);
+    color: white;
+    min-height: 78px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--dourado);
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 0;
+    transition: .2s;
+}
+
+nav a:hover,
+nav a.selecionado {
+    color: var(--dourado);
+}
+
+/* BANNER PRINCIPAL */
+
+.banner {
+    min-height: 490px;
+    background: var(--vermelho);
+    color: white;
+    padding: 55px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.banner-texto {
+    max-width: 560px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--dourado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+}
+
+.banner h1,
+.cabecalho-artistas h1 {
+    font-size: clamp(42px, 5.5vw, 68px);
+    line-height: 1.05;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.banner h1 span,
+.cabecalho-artistas h1 span {
+    color: var(--dourado);
+}
+
+.banner-texto p {
+    max-width: 460px;
+    line-height: 1.7;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+.botao {
+    display: inline-block;
+    background: var(--dourado);
+    color: var(--preto);
+    font-size: 11px;
+    font-weight: 900;
+    padding: 15px 21px;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+.botao:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.banner-foto {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    border: 7px solid white;
+    border-radius: 8px;
+    box-shadow: 12px 12px 0 var(--vermelho-escuro);
+}
+
+.banner-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-legenda {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 17px;
+    color: white;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    background: linear-gradient(transparent, #000c);
+}
+
+/* DESTAQUES */
+
+.destaques {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.titulo-secao h2 {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.titulo-secao > p {
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.titulo-secao .etiqueta {
+    color: var(--vermelho);
+}
+
+.mini-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 42px;
+}
+
+.mini-cards article {
+    background: white;
+    padding: 30px 22px;
+    border-bottom: 5px solid var(--vermelho);
+    border-radius: 5px;
+    box-shadow: 0 5px 20px #0000000c;
+    transition: .2s;
+}
+
+.mini-cards article:hover {
+    transform: translateY(-6px);
+}
+
+.icone {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 17px;
+    border-radius: 50%;
+    background: var(--vermelho);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+.mini-cards h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.mini-cards p {
+    color: var(--cinza);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* CHAMADA */
+
+.chamada {
+    background: var(--preto);
+    color: white;
+    padding: 40px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.chamada h2 {
+    max-width: 570px;
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+.botao-claro {
+    background: var(--vermelho);
+    color: white;
+    white-space: nowrap;
+}
+
+.botao-claro:hover {
+    background: var(--vermelho-escuro);
+}
+
+/* PÁGINA DE ARTISTAS */
+
+.cabecalho-artistas {
+    background: var(--vermelho);
+    color: white;
+    text-align: center;
+    padding: 65px 8%;
+}
+
+.cabecalho-artistas h1 {
+    margin-bottom: 13px;
+}
+
+.cabecalho-artistas p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.lista-artistas {
+    padding: 55px 8%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.artista {
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 5px 22px #00000012;
+    transition: .25s;
+}
+
+.artista:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px #00000020;
+}
+
+.artista img {
+    display: block;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.artista-info {
+    padding: 22px;
+    border-top: 5px solid var(--vermelho);
+}
+
+.numero {
+    color: var(--vermelho);
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.artista-info h2 {
+    font-size: 21px;
+    margin: 8px 0;
+    font-weight: 900;
+}
+
+.artista-info p {
+    color: var(--cinza);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.voltar {
+    text-align: center;
+    padding: 0 20px 65px;
+}
+
+.voltar .botao {
+    background: var(--vermelho);
+    color: white;
+}
+
+.voltar .botao:hover {
+    background: var(--vermelho-escuro);
+}
+
+/* RODAPÉ */
+
+footer {
+    background: var(--preto);
+    color: white;
+    padding: 27px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p {
+    color: #ccc;
+    font-size: 11px;
+}
+
+/* TABLETS */
+
+@media (max-width: 800px) {
+    .banner {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-foto {
+        height: 320px;
+    }
+
+    .lista-artistas {
+        gap: 18px;
+    }
+
+    .artista img {
+        height: 220px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .topo {
+        padding: 20px 5%;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 35px;
+    }
+
+    .banner {
+        padding: 45px 6%;
+        gap: 30px;
+    }
+
+    .banner h1,
+    .cabecalho-artistas h1 {
+        font-size: 43px;
+    }
+
+    .banner-foto {
+        height: 250px;
+    }
+
+    .destaques {
+        padding: 55px 6%;
+    }
+
+    .titulo-secao h2 {
+        font-size: 27px;
+    }
+
+    .mini-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .chamada {
+        padding: 35px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chamada h2 {
+        font-size: 23px;
+    }
+
+    .cabecalho-artistas {
+        padding: 50px 6%;
+    }
+
+    .lista-artistas {
+        grid-template-columns: 1fr;
+        padding: 35px 6%;
+    }
+
+    .artista img {
+        height: 260px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
